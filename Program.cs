@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +10,13 @@ namespace Terningen
     {
         static void Main(string[] args)
         {
+            // Creating new random
             Random random = new Random();
+            // Specifying that we want a random number from 1 to 6
             int dice = random.Next(1, 7);
+            // Array with our translated "eyes" for the dice hit.
             string[] eye = { "one eye", "two eyes", "three eyes", "four eyes", "five eyes", "six eyes" };
+            // Switch system to write what dice we hit with custom color.
             switch (dice)
             {
                 case 1:
@@ -40,9 +44,8 @@ namespace Terningen
                     Console.WriteLine("You hit " + eye[5]);
                     break;
             }
+            // Readline so we can observe the hit.
             Console.ReadLine();
         }
     }
 }
-
-
